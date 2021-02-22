@@ -5,15 +5,22 @@ void main()
     char a[100]="\0";
     char b[100]="\0";
     char c[100]="\0";
-    int arr[8];
-    int prev=0;
-    printf("Enter the 8 bit input data: ");
-    for(int j=0;j<8;j++)
+    int prev=0,n;
+    printf("Enter the number of bits: ");
+    scanf("%d",&n);
+    int arr[n];
+    printf("\nEnter the input data: ");
+    for(int j=0;j<n;j++)
         scanf("%d",&arr[j]);
     printf("\n                     CLOCK PULSE\n");
-    printf(" ___     ___     ___     ___     ___     ___     ___     ___     \n");
-    printf("|   |___|   |___|   |___|   |___|   |___|   |___|   |___|   |___|\n\n\n");
-    for(int i=0;i<8;i++)
+    for(int i=1;i<n+1;i++)
+    printf(" ___    ");
+    printf("\n");
+    for(int i=1;i<n+1;i++)
+    printf("|   |___");
+    printf("|");
+    printf("\n\n\n");
+    for(int i=0;i<n;i++)
     {
         if (arr[i]==0)
         {
@@ -50,7 +57,7 @@ void main()
     strcpy(a,"\0");
     strcpy(b,"\0");
     strcpy(c,"\0");
-        for(int i=0;i<8;i++)
+        for(int i=0;i<n;i++)
     {
         if (arr[i]==1)
         {
@@ -92,7 +99,7 @@ void main()
     strcpy(a,"\0");
     strcpy(b,"\0");
     strcpy(c,"\0");
-    for(int i=0;i<8;i++)
+    for(int i=0;i<n;i++)
     {
         if (i==0)
         {
@@ -159,7 +166,7 @@ void main()
     strcpy(a,"\0");
     strcpy(b,"\0");
     strcpy(c,"\0");
-    for(int i=0;i<8;i++)
+    for(int i=0;i<n;i++)
     {
         if (arr[i]==0)
         {
@@ -185,7 +192,7 @@ void main()
     strcpy(b,"\0");
     strcpy(c,"\0");
     prev=0;
-    for(int i=0;i<8;i++)
+    for(int i=0;i<n;i++)
     {
         if (arr[i]==1)
         {
@@ -231,7 +238,7 @@ void main()
     strcpy(b,"\0");
     strcpy(c,"\0");
     prev=0;
-        for(int i=0;i<8;i++)
+        for(int i=0;i<n;i++)
     {
         if (arr[i]==0)
         {
